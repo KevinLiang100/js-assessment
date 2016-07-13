@@ -70,7 +70,11 @@ exports.arraysAnswers = {
   },
 
   count: function(arr, item) {
-
+    var counter = 0;
+    arr.forEach(function(currentValue) {
+      if (currentValue === item) {counter++;}
+    });
+    return counter;
   },
 
   duplicates: function(arr) {
