@@ -77,6 +77,7 @@ exports.arraysAnswers = {
     return counter;
   },
 
+  // Requested to work for array of numbers only
   duplicates: function(arr) {
     var encountered = {};
     var result = [];
@@ -92,7 +93,10 @@ exports.arraysAnswers = {
   },
 
   square: function(arr) {
-
+    arr.forEach(function(currentValue, index, array) {
+      array[index] *= currentValue;
+    });
+    return arr;
   },
 
   findAllOccurrences: function(arr, target) {
