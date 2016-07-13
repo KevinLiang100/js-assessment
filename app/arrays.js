@@ -55,12 +55,12 @@ exports.arraysAnswers = {
   concat: function(arr1, arr2) {
     // return arr1.concat(arr2);
     var result = [];
-    for (var i = 0; i < arr1.length; i++) {
-      result.push(arr1[i]);
-    }
-    for (var i = 0; i < arr2.length; i++) {
-      result.push(arr2[i]);
-    }
+    arr1.forEach(function(currentValue) {
+      result.push(currentValue);
+    });
+    arr2.forEach(function(currentValue) {
+      result.push(currentValue);
+    });
     return result;
   },
 
