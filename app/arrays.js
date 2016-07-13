@@ -78,7 +78,17 @@ exports.arraysAnswers = {
   },
 
   duplicates: function(arr) {
-
+    var encountered = {};
+    var result = [];
+    arr.forEach(function(currentValue) {
+      encountered[currentValue] = encountered[currentValue] + 1 || 1;
+    });
+    for (var key in encountered) {
+      if (encountered[key] > 1) {
+        result.push(Number(key));
+      }
+    }
+    return result;
   },
 
   square: function(arr) {
